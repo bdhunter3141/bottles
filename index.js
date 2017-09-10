@@ -5,7 +5,7 @@ var bottles = null;
 var currentBottleCaps = [];
 
 var bottlesForDollars = function(dollars) {
-  bottles = dollars / 2;
+  bottles = Math.floor(dollars / 2);
   return bottles;
 }
 
