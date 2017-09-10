@@ -1,7 +1,5 @@
-  // For every two empty bottles, you can get one free (full) bottle of pop
-  // Each bottle of pop costs $2 to purchase
-  // For every four bottle caps, you can get one free (full) bottle of pop
 
+var dollarAmount = Number(process.argv[2]);
 var resultBottles = null;
 var bottles = null;
 var currentBottleCaps = [];
@@ -44,8 +42,9 @@ var totalBottles = function(dollars) {
     bottles += bottleCapsToFull(bottleCaps);
     bottleCaps = currentBottleCaps.pop(0) + currentBottleCaps.pop(1);
   }
-  return resultBottles;
+  console.log(resultBottles);
 }
 
+totalBottles(dollarAmount);
 
 module.exports = totalBottles;
